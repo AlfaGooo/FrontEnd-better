@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Circle of life</title>
+  <meta charset="utf-8">
+  <meta name="description" content="t20. Circle of life">
+  <style>
+  
+  .main-block {
+  height: 600px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  background: green;
+  border-radius: 60%;
+  animation-name: slide-vertically;
+  animation-duration: 0.0001s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  position: absolute;
+}
+
+.circle:hover {
+  background: blue;
+}
+
+@keyframes slide-vertically {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: calc(72% - 150px);
+    margin-left: calc(93% - 150px);
+  }
+}
+
+.circle2 {
+  height: 150px;
+  width: 150px;
+  background: red;
+  border-radius: 60%;
+  animation-name: slide-horizont;
+  animation-duration: 0.0001s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.circle2:hover {
+  background: orange;
+}
+
+@keyframes slide-horizont {
+  from {
+    margin-left: 80%;
+  }
+  to {
+    margin-top: calc(78% - 150px);
+    margin-right: calc(100% - 150px);
+  }
+}
+  
+  </style>
+</head>
+
+<body>
+  <div class="main-block">
+    <div class="circle"></div>
+    <div class="circle2"></div>
+  </div>
+</body>
+
+</html>
+
